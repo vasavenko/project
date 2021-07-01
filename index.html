@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор дат</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="/js/main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<button id='calc' type="button" class="switch" data-type="datecalc">Калькулятор дат:</button>
+		<button id ="timer" type="button" class="switch" data-type="timer">Таймер</button>
+	</div>
+
+
+	<div class="timer">
+		<label >минуты
+		<input type="number" id="min" min="0" max="100">
+		</label>
+		<label>секунды
+		<input type="number" id="sec" min="0" max="60">
+		</label>
+		<div class="start">
+			<button id="start" type="button" >Старт</button>
+			<button id="stop" type="button">Стоп</button>
+			<button id="clear" type="button">Сброс</button>
+		</div>
+		<p id="timer__err"></p>
+
+	</div>
+
+
+
+	<div class="datecalc">
+		<form id="datecalc" >
+		<label>
+			<strong>Первая дата</strong>
+			<input type="date" name="firstDate">
+		</label>
+		<label>
+			<strong>Вторая дата</strong>
+			<input type="date" name="secondDate">
+		</label>
+		 <button type="submit">Расчитать</button>
+		 <p id="datecalc__result"></p>
+	</form>
+	
+	</div>
+	
+</body>
+</html>
