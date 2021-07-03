@@ -1,21 +1,13 @@
-export function switcher(){
-	let timer = document.querySelector(".timer");
-	let datecalc = document.querySelector(".datecalc");
-	let buttonsEl = document.querySelectorAll('.switch');
-		buttonsEl.forEach(function(buttonEl){
-			buttonEl.addEventListener('click', changeActiveClass)
-			timer.classList.add("active");
+const appEls = document.querySelectorAll('.app');
+const buttonEls = document.querySelectorAll('.switch');
+buttonEls.forEach(function (buttonEl) {
+	buttonEl.addEventListener('click', changeActiveClass)
 });
 
 function changeActiveClass(event) {
-		if(event.target.dataset.type == 'timer'){
-			datecalc.classList.remove("active");
-			timer.classList.add("active");
-		} else {
-			timer.classList.remove("active");
-			datecalc.classList.add("active");
-		}
+	appEls.forEach(appEl => {
+		if (event.target.dataset.type == appEl.dataset.type) {
+			appEl.classList.add("active")
+		} else appEl.classList.remove("active")
+	});
 }
-
-}
-switcher();
