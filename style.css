@@ -1,0 +1,18 @@
+.datecalc {
+	display: none;
+}
+.header {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.timer {
+	display: none;
+	margin-bottom: 20px;
+}
+.active {
+	display: block;
+}
+.start {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
